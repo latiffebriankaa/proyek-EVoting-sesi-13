@@ -1,5 +1,6 @@
 import json
 import os
+from modul import utils
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'pemilih.json')
 
@@ -17,9 +18,9 @@ daftar_pemilih = load_pemilih()
 
 def tambah_pemilih():
     global daftar_pemilih
-    idp = input("Masukkan ID pemilih: ")
-    nama = input("Masukkan nama pemilih: ")
-    jurusan = input("Masukkan jurusan pemilih: ")
+    idp = utils.input_non_kosong("Masukkan ID pemilih: ")
+    nama = utils.input_non_kosong("Masukkan nama pemilih: ")
+    jurusan = utils.input_non_kosong("Masukkan jurusan pemilih: ")
 
     for pemilih in daftar_pemilih:
         if pemilih["id"] == idp:

@@ -1,5 +1,6 @@
 import json
 import os
+from modul import utils
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'calon.json')
 
@@ -17,9 +18,9 @@ daftar_calon = load_calon()
 
 def tambah_calon():
     global daftar_calon
-    idc = input("Masukkan ID calon: ")
-    nama = input("Masukkan nama calon ketua: ")
-    visi = input("Masukkan visi misi calon: ")
+    idc = utils.input_non_kosong("Masukkan ID calon: ")
+    nama = utils.input_non_kosong("Masukkan nama calon ketua: ")
+    visi = utils.input_non_kosong("Masukkan visi misi calon: ")
 
     for calon in daftar_calon:
         if calon["id"] == idc or calon["nama"].lower() == nama.lower():
