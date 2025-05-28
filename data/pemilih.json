@@ -9,7 +9,7 @@
         "id": "PM002",
         "nama": "Budi",
         "jurusan": "TI",
-        "sudah_memilih": false
+        "sudah_memilih": true
     },
     {
         "id": "PM003",
