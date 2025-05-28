@@ -22,9 +22,13 @@ def tambah_calon():
     nama = utils.input_non_kosong("Masukkan nama calon ketua: ")
     visi = utils.input_non_kosong("Masukkan visi misi calon: ")
 
+    # Validasi ID atau nama sudah terdaftar
     for calon in daftar_calon:
-        if calon["id"] == idc or calon["nama"].lower() == nama.lower():
-            print("Calon dengan ID atau nama tersebut sudah terdaftar.")
+        if calon["id"] == idc:
+            print("ID calon sudah terdaftar.")
+            return
+        if calon["nama"].lower() == nama.lower():
+            print("Nama calon sudah terdaftar.")
             return
 
     calon_baru = {

@@ -1,6 +1,6 @@
+from modul import utils
 import json
 import os
-from modul import utils
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'pemilih.json')
 
@@ -19,13 +19,17 @@ daftar_pemilih = load_pemilih()
 def tambah_pemilih():
     global daftar_pemilih
     idp = utils.input_non_kosong("Masukkan ID pemilih: ")
-    nama = utils.input_non_kosong("Masukkan nama pemilih: ")
-    jurusan = utils.input_non_kosong("Masukkan jurusan pemilih: ")
-
+    # Cek apakah ID sudah ada
     for pemilih in daftar_pemilih:
         if pemilih["id"] == idp:
-            print("ID pemilih sudah terdaftar.")
+            if pemilih["sudah_memilih"]:
+                print("Pemilih ini sudah pernah memilih dan tidak bisa didaftarkan lagi.")
+            else:
+                print("ID pemilih sudah terdaftar.")
             return
+
+    nama = utils.input_non_kosong("Masukkan nama pemilih: ")
+    jurusan = utils.input_non_kosong("Masukkan jurusan pemilih: ")
 
     pemilih_baru = {
         "id": idp,

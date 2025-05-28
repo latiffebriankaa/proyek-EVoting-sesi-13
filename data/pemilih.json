@@ -1,26 +1,32 @@
 [
-    {
-        "id": "PM001",
-        "nama": "Ayu",
-        "jurusan": "SI",
-        "sudah_memilih": false
-    },
-    {
-        "id": "PM002",
-        "nama": "Budi",
-        "jurusan": "TI",
-        "sudah_memilih": true
-    },
-    {
-        "id": "PM003",
-        "nama": "Citra",
-        "jurusan": "SI",
-        "sudah_memilih": false
-    },
-    {
-        "id": "PM004",
-        "nama": "latip",
-        "jurusan": "TI",
-        "sudah_memilih": true
-    }
+  {
+    "id": "PM001",
+    "nama": "Ayu",
+    "jurusan": "SI",
+    "sudah_memilih": false
+  },
+  {
+    "id": "PM002",
+    "nama": "Budi",
+    "jurusan": "TI",
+    "sudah_memilih": true
+  },
+  {
+    "id": "PM003",
+    "nama": "Citra",
+    "jurusan": "SI",
+    "sudah_memilih": false
+  },
+  {
+    "id": "PM004",
+    "nama": "latip",
+    "jurusan": "TI",
+    "sudah_memilih": true
+  },
+  {
+    "id": "PM005",
+    "nama": "rado",
+    "jurusan": "TI",
+    "sudah_memilih": false
+  }
 ]
