@@ -1,5 +1,9 @@
 from modul import pemilih, calon, voting, statistik
+import os
 
+os.system('cls' if os.name == 'nt' else 'clear')
+print("Selamat datang di Sistem Pemilihan")
+print("-----------------------------------")
 def main():
     while True:
         print("\n===== SISTEM E-VOTING =====")
