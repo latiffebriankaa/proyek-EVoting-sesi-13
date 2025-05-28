@@ -1,4 +1,19 @@
-daftar_calon = []
+import json
+import os
+
+DATA_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'calon.json')
+
+def load_calon():
+    if os.path.exists(DATA_PATH):
+        with open(DATA_PATH, 'r') as f:
+            return json.load(f)
+    return []
+
+def save_calon(daftar_calon):
+    with open(DATA_PATH, 'w') as f:
+        json.dump(daftar_calon, f, indent=4)
+
+daftar_calon = load_calon()
 
 def tambah_calon():
     global daftar_calon
@@ -6,7 +21,6 @@ def tambah_calon():
     nama = input("Masukkan nama calon ketua: ")
     visi = input("Masukkan visi misi calon: ")
 
-    # Cek apakah ID atau nama sudah terdaftar
     for calon in daftar_calon:
         if calon["id"] == idc or calon["nama"].lower() == nama.lower():
             print("Calon dengan ID atau nama tersebut sudah terdaftar.")
@@ -19,6 +33,7 @@ def tambah_calon():
         "jumlah_suara": 0
     }
     daftar_calon.append(calon_baru)
+    save_calon(daftar_calon)
     print(f"Calon {nama} berhasil didaftarkan.")
 
 def tampilkan_calon():

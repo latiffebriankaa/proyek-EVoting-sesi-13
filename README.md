@@ -30,6 +30,6 @@ e_voting/
 3. Ikuti menu navigasi untuk menggunakan aplikasi.
 
 ## Dibuat oleh:
-- [Nama Mahasiswa]
-- [NIM]
-- [Kelas]
+- latip
+- 20240040036
+- ti24h

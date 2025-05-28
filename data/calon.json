@@ -1,0 +1,20 @@
+[
+    {
+        "id": "CL001",
+        "nama": "Dewi",
+        "visi": "Meningkatkan solidaritas",
+        "jumlah_suara": 1
+    },
+    {
+        "id": "CL002",
+        "nama": "Eko",
+        "visi": "Transparansi organisasi",
+        "jumlah_suara": 0
+    },
+    {
+        "id": "CL003",
+        "nama": "LATIP",
+        "visi": "menjadikan ti sebagai wadah",
+        "jumlah_suara": 0
+    }
+]
